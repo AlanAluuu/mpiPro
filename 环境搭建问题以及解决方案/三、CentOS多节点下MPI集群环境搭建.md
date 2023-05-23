@@ -14,7 +14,7 @@
 
 然后选择创建完整克隆，因为完成克隆相对于原始虚拟机时完全独立的，链接克隆相当于从副虚拟机快照创建的。
 
-![Alt text]([https://github.com/AlanAluuu/mpiPro/screenshots/kl2.png](https://github.com/AlanAluuu/mpiPro/blob/main/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/screenshots/kl2.png))
+![Alt text](https://github.com/AlanAluuu/mpiPro/blob/main/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/screenshots/kl2.png)
 
 然后进行ip的修改，在虚拟机上cd到/etc/sysconfig/network-scripts中利用sudo vim ifcfg-ens33（我的这里和博主的不一样）设置Linux网络接口，在配置文件仅仅需要修改ip地址即可，网段不要变化。记得设置后要systemctl restart network重启一下网络，要不你输入ip addr显示ip地址仍然没有变化。最后ping一下，看克隆后的虚拟机和原虚拟机能不能相互连接通。也可以继续去测试一下克隆后的MPI能不能用。
 
