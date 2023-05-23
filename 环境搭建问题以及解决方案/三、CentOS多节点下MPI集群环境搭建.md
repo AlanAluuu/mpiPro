@@ -10,11 +10,11 @@
 
 点击你想要进行克隆的虚拟机，选择虚拟机——》管理——》克隆
 
-<img src="C:\Users\Lulu\Desktop\分布式mpi项目\screenshots\kl1.png" alt="kl1" style="zoom: 67%;" />
+![Alt text](https://github.com/AlanAluuu/mpiPro/screenshots/kl1.png)
 
 然后选择创建完整克隆，因为完成克隆相对于原始虚拟机时完全独立的，链接克隆相当于从副虚拟机快照创建的。
 
-![kl2](C:\Users\Lulu\Desktop\分布式mpi项目\screenshots\kl2.png)
+![Alt text](https://github.com/AlanAluuu/mpiPro/screenshots/kl2.png)
 
 然后进行ip的修改，在虚拟机上cd到/etc/sysconfig/network-scripts中利用sudo vim ifcfg-ens33（我的这里和博主的不一样）设置Linux网络接口，在配置文件仅仅需要修改ip地址即可，网段不要变化。记得设置后要systemctl restart network重启一下网络，要不你输入ip addr显示ip地址仍然没有变化。最后ping一下，看克隆后的虚拟机和原虚拟机能不能相互连接通。也可以继续去测试一下克隆后的MPI能不能用。
 
